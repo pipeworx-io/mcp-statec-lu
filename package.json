@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-statec-lu",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "STATEC (Institut national de la statistique et des études économiques du",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-statec-lu": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "statec-lu"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-statec-lu"
+    "url": "git+https://github.com/pipeworx-io/mcp-statec-lu.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-efd7a7b38854020f31ea57b7685b85b4df7776d6f7e2806ac9ccdd1ffef9ae55",
+    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
   }
 }
