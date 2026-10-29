@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-statec-lu",
-  "version": "0.1.4",
-  "description": "STATEC (Institut national de la statistique et des études économiques du",
+  "version": "0.2.0",
+  "description": "STATEC (Institut national de la statistique et des études économiques du Grand-Duché de Luxembourg) MCP — Luxembourg's official statistics via the public LUSTAT .Stat Suite SDMX 2.1 REST web service. No auth / no API key.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-statec-lu": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "statec-lu"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-statec-lu.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/statec-lu",
   "pipeworx": {
-    "sourceHash": "v1-96779406079b02559b4a5405cf494b9a285ae7de9cbf0bb04454df62963a281c",
-    "sourceCommit": "a00767651388cfd017fdeac82188622721db2051"
+    "mode": "gateway",
+    "slug": "statec-lu",
+    "gatewaySlug": "statec-lu",
+    "sourceHash": "v1-bd8737c9596413463fc668341752713d9f1e06102891421c02f9ccfbe6c0f6c8",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }
